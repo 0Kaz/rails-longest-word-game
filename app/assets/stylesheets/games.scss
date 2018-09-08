@@ -1,0 +1,56 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-image: url("england.jpg");
+   color:white;
+}
+
+ul {
+   padding: 10px;
+}
+li {
+   display: inline-block;
+}
+
+
+.letters {
+  background-color: #bbceed;
+
+  font-weight:bold;
+  font-size:30px;
+  padding: 50px 50px;
+  margin : 10px;
+}
+
+h1, h2, p, form, .image_center {
+  text-align: center;
+}
+
+.box-letters {
+  top:80px;
+}
+
+.box-answer {
+  top:150px;
+}
+
+
+.answers_user {
+  position:relative;
+  left:90px;
+  top:50px;
+}
+
+
+.form-control {
+    width: 125%;
+    height: 45px;
+    font-size: 30px;
+}
+
+.btn .btn-primary {
+  position:relative;
+  right:60px;
+}

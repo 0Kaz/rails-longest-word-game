@@ -1,0 +1,42 @@
+<h1>Do you speak English ? <%= image_tag "flag.png" , width: "50px" , height: "30px"%> </h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 box-letters">
+      <ul>
+      <% stuff = []%>
+      <% @letters.each do |letter| %>
+          <li class ="letters" id="draggable"><%= letter %></li>
+         <% stuff << letter %>
+      <% end %>
+      </ul>
+    </div>
+
+
+<div class="col-md-12 box-answer">
+  <h2>What is the longest word you can find ? </h2>
+    <br>
+      <h2>Choose a letter from the grid !</h2>
+        <h1><%= @session %></h1>
+          <form action="score" method ="post">
+            <%= hidden_field_tag 'iteration' , stuff%>
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            <div class="form-group">
+              <div class="container">
+                <div class="row answers_user">
+                <div class="col-md-6">
+              <input type="text" name="getting_score" class ="form-control">
+            </div>
+
+                <div class="col-md-6">
+              <input type="submit" class="btn btn-primary btn-lg">
+            </div>
+          </div>
+              </div>
+
+
+           </div>
+          </form>
+        </div>
+    </div>
+</dis>

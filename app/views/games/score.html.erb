@@ -1,0 +1,20 @@
+<h1>My Score</h1>
+
+<% if @checking_grid %>
+  <% if @result == true %>
+      <p> Congratulations, this is a valid <b>English</b> word</p>
+      <br>
+      <div class ="image_center"><img src ="http://www.mylinternational.com/wp-content/uploads/2018/03/I-speak-English-very-well.jpg"></div>
+  <% else %>
+      <p>ENGLISH !!! How in the hell <b><%= @input.upcase %></b> can be english out of this => ?  <%= @output.gsub(/\s+/,",") %></p>
+      <br>
+      <div class ="image_center"><img src="https://orig00.deviantart.net/b810/f/2014/050/9/b/english_motherfucker_do_you_speak_it_by_h311man-d774bf9.jpg"></div>
+  <% end %>
+<% else %>
+  <p>Which part of "Choose a letter from the grid" you didn't understand?  </p>
+  <br>
+  <div class ="image_center"><img src ="https://i.kym-cdn.com/entries/icons/original/000/000/554/picard-facepalm.jpg"></div>
+<% end %>
+
+
+<center><%= link_to image_tag("goback.png", width: "50px", top: "60px"), root_path %></center>
